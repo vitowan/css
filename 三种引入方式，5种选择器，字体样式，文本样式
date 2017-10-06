@@ -46,10 +46,10 @@ css选择器：
 4.伪类选择器:  :focus, :hover, ::selection
 img:hover{background:#f0f; border-radius:256px;}
 
-.username:focus{outline-color:#f00; background:#0f0;}
+.username:focus{outline-color:#f00; background:#0f0;} 焦点到框时出现样式效果
 <input type="text" class="username">
 
-p::selection{background:#ff0000}
+p::selection{background:#ff0000} 前端用户选择字段时出现样式效果
 
 5.属性选择器
 [id]
@@ -66,6 +66,7 @@ font-size:20px;字体大小
 font-style:italic;字体样式
 font-weight:bold;字体粗细
 
+
 文本样式:
 letter-spacing 字母间距
 word-spacing 词间距
@@ -74,7 +75,7 @@ text-align  对齐
 text-indent  首行缩进
 line-height 行高
 color 颜色
-word-break折行（overflow:auto;自动出现滚动条word-break:break-all;折行)
+word-break折行（overflow:auto;自动出现滚动条word-break:break-all;折行)例如无数个a在同一个行的情况
 
 
 </body>
