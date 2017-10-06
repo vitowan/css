@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="keywords" content="学习"><!--注释符合-->
+<meta name="description" content="我在学习">
+<title>首页</title>
+
+</head>
+<body>
+<!--
+css的三种引入方式
+1.行内样式
+ <h1 style="color:red;">Leaping Above The Water</h1>
+2.内部样式，写到head之间，type可省略
+   <style type="text/css">
+      h3{color:red;}
+   </style>
+3.外部样式，写到head之间用link,type可省略
+<link rel="stylesheet" type="text/css" href="css/style.css">
+-->
+
+<!--
+css的注释用/*    */
+
+
+
+css的尺寸：px; em; %
+
+
+
+css选择器：
+1.常用选择器:id,class,类，关联选择器：div div1(div里面的div1，要空格)；组合选择器（用,分开）
+
+
+2.基本选择器：img:first-child{} img的第一个元素;img:last-child{} img的最后一个元素;p:first-letter{font-size:50px;}第一个字母或第一个字加css
+				p:first-line{font-size:50px;}第一行变样式
+
+
+3.层级选择器：
+	a b;
+	a,b;
+	a>b;直接子元素b
+	a+b;同级的后面的元素b
+	
+4.伪类选择器:  :focus, :hover, ::selection
+img:hover{background:#f0f; border-radius:256px;}
+
+.username:focus{outline-color:#f00; background:#0f0;}
+<input type="text" class="username">
+
+p::selection{background:#ff0000}
+
+5.属性选择器
+[id]
+[id=use1]
+[name*=us]含有us的
+[name|=en]
+-->
+
+
+
+字体样式
+font-family:微软雅黑/黑体/仿宋等;字体类型
+font-size:20px;字体大小
+font-style:italic;字体样式
+font-weight:bold;字体粗细
+
+文本样式:
+letter-spacing 字母间距
+word-spacing 词间距
+text-decoration 下划线之类的（underline,line-through,overline)
+text-align  对齐
+text-indent  首行缩进
+line-height 行高
+color 颜色
+word-break折行（overflow:auto;自动出现滚动条word-break:break-all;折行)
+
+
+</body>
+</html>
