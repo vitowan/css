@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>demo页面</title>
+<style>
+/*
+父板块相对定位，子版块绝对定位的css例子,这也是实现div绝对居中的方式
+#div1{
+	background:#f0f;
+	width:600px;
+	height:500px;
+	margin:0 auto;
+	position:relative;
+}
+#div1 div{
+	width:100px;
+	height:100px;
+	background:#0f0;
+	position:absolute;
+	left:5px;
+	top:5px;
+}
+*/
+</style>
+</head>
+<body>
+<!--
+尺寸
+width
+height
+min-width 最小宽度,防挤压
+
+
+textarea尺寸
+width
+height
+resize:none不可在页面调整框的大小
+
+
+表格样式
+table{width:1000px;}
+border:2px solid #00f;
+border-collapse:collapse;相邻边框合并
+
+td,th{text-align:center;border:2px solid #00f;}
+border-spacing表格空隙
+
+
+定位position
+position:absolute;绝对定位脱离文档流浮动起来，可以改x和y改变位置，xy位置相对浏览器左上角
+position:relative;相对定位脱离文档流浮动起来，原来的位置不被其它占用，xy位置相对原来的自己
+定位的四个方向：left,right,top,bottom
+相同点：都脱离文档流
+不同点：绝对的坐标系在浏览器左上角，相对的坐标系在自己左上角；绝对不站位，相对占位
+
+z-index:1/2/3定位的高度，设置哪个排在上面
+例如img{z-index:1}
+-->
+
+<div id="div1">
+	<div></div>
+</div>
+
+子板块会跟着父板块走，如果子板块绝对定位后想以父板块左上角为坐标点，则父板块需要定位（相对和绝对都可以），典型案例，父板块相对定位，子版块绝对定位
+
+
+让一个div放到正中间的位置：左边以div的左上边算的，不是中间
+position:absolute;
+top:50%;
+left:50%;
+margin-top:-50px;
+margin-left:-50px;
+
+</body>
+</html>
