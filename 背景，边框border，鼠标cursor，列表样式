@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>demo页面</title>
+<style>
+
+</style>
+</head>
+<body>
+背景background
+background-color颜色
+background-image图片:url("")
+background-repeat重复（repeat、no-repeat）
+background-attachment  （fixed/scroll)scroll只适用于body滚动；fixed固定
+background-position：（x y)可写成50% 50%，也可以写成300px 500px，也可写成left/right/top/bottom(例如left top或者center center)，如果不写y坐标值表示y值不变
+background可缩写例如 background:#cc url("xs.png") no-repeat fixed 50% 50%;
+
+如果很多图在一块，可先定需要定容器div的宽高（width height），然后设定background背景图位置position
+
+
+
+边框border
+border-style:solid;  dashed小虚线/dotted小横线/double双线/inset凹/outset凸/groove山谷凹/ridge山谷凸
+border-width:1px;
+border-color:#f00;
+以上简写成 border:1px solid #f00;
+border-right/left/top/bottom:某一边的框
+也可以去掉默认的边框，例如form表格自带边框可去掉 border：none;
+
+
+
+鼠标cursor
+cursor:crosshair十字架/pointer手/wait等待/default默认/help帮助
+
+
+列表样式
+list-style-type:none/dis实心圆/circle空心圆/square方块/decimal数字/lower-roman小罗马数字/upper-roman大罗马数字/lower-alpha小写/upper-alpha大写
+
+
+尺寸
+width
+height
+min-width 最小宽度,防挤压
+
+
+textarea尺寸
+width
+height
+resize:none不可在页面调整框的大小
+
+
+表格样式
+table{width:1000px;}
+border:2px solid #00f;
+border-collapse:collapse;边框合并
+
+td,th{text-align:center;border:2px solid #00f;}
+border-spacing表格空隙
+
+
+定位position
+position:absolute;绝对定位脱离文档流浮动起来，可以改x和y改变位置，xy位置相对浏览器左上角
+position:relative;相对定位脱离文档流浮动起来，原来的位置不被其它占用，xy位置相对原来的自己
+
+相同点：都脱离文档流
+不同点：绝对的坐标系在浏览器左上角，相对的坐标系在自己左上角；绝对不站位，相对占位
+
+z-index:1/2/3定位的高度，设置哪个排在上面
+例如img{z-index:1}
+
+</body>
+</html>
