@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>demo页面</title>
+<style>
+
+</style>
+</head>
+<body>
+内外边距
+margin:上右下左，如果上下都有，则合并以大的数字尺寸为准，左右同样方式
+padding的距离和border的宽度是外延的变大，内部图片不变大小
+例如img原宽高100*100，边框为5，内边距是5，则总占位图片120*120
+
+
+清除浮动left/right/both： 浮动后左/右/都不能有人,防止盒子坍塌。例如清除左边浮动后，当前浮动宁愿跑第二行，让左边没浮动元素。
+<div style="clear:both"></div>
+或者写到css内部，例如给div设置个id="div1"
+div1{clear:both;}
+
+
+float浮动在原位置上升后，只能在同层的左右浮动，不能上下浮动。
+</body>
+</html>
