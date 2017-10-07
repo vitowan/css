@@ -38,36 +38,5 @@ cursor:crosshair十字架/pointer手/wait等待/default默认/help帮助
 list-style-type:none/dis实心圆/circle空心圆/square方块/decimal数字/lower-roman小罗马数字/upper-roman大罗马数字/lower-alpha小写/upper-alpha大写
 
 
-尺寸
-width
-height
-min-width 最小宽度,防挤压
-
-
-textarea尺寸
-width
-height
-resize:none不可在页面调整框的大小
-
-
-表格样式
-table{width:1000px;}
-border:2px solid #00f;
-border-collapse:collapse;边框合并
-
-td,th{text-align:center;border:2px solid #00f;}
-border-spacing表格空隙
-
-
-定位position
-position:absolute;绝对定位脱离文档流浮动起来，可以改x和y改变位置，xy位置相对浏览器左上角
-position:relative;相对定位脱离文档流浮动起来，原来的位置不被其它占用，xy位置相对原来的自己
-
-相同点：都脱离文档流
-不同点：绝对的坐标系在浏览器左上角，相对的坐标系在自己左上角；绝对不站位，相对占位
-
-z-index:1/2/3定位的高度，设置哪个排在上面
-例如img{z-index:1}
-
 </body>
 </html>
