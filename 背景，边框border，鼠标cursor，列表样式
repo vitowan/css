@@ -23,7 +23,7 @@ background可缩写例如 background:#cc url("xs.png") no-repeat fixed 50% 50%;
 边框border
 border-style:solid;  dashed小虚线/dotted小横线/double双线/inset凹/outset凸/groove山谷凹/ridge山谷凸
 border-width:1px;
-border-color:#f00;
+border-color:#f00; 默认为transparent透明
 以上简写成 border:1px solid #f00;
 border-right/left/top/bottom:某一边的框
 也可以去掉默认的边框，例如form表格自带边框可去掉 border：none;
