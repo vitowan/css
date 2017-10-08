@@ -18,6 +18,11 @@ background可缩写例如 background:#cc url("xs.png") no-repeat fixed 50% 50%;
 
 如果很多图在一块，可先定需要定容器div的宽高（width height），然后设定background背景图位置position
 
+css3背景background新增
+background-size:宽高，一个值或2个，例如100px
+background-origin:content-box有效区域/padding-box默认内边距/border-box边框边距; 此属性表示背景图位置
+
+
 
 
 边框border
@@ -31,7 +36,7 @@ border-right/left/top/bottom:某一边的框
 border-radius边框样式（css3新加）
 border-radius:把角落变成圆角，如果只有一个值128px就变成圆了，可跟1个值，二个，三个或4个，值表示4个角的内切圆直径
 例如border-radius:5px四个角的值一样/5px 20px/20px 50px 100px/20px 50px 100px 120px/类似于position定位上右下左
-
+border-image：详情查手册。
 
 
 鼠标cursor
