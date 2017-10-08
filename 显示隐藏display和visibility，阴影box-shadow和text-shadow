@@ -1,0 +1,17 @@
+
+显示display和隐藏visibility
+display:none;消失后不占位
+display:block显示块元素出来/inline显示行元素/
+visibility：hidden;隐身后占位/visible显示
+
+
+
+阴影
+box-shadow:5px 5px 5px 5px #999 inset
+分表表示阴影水平移动值可为负，竖直移动值可为负，模糊值不可为负，阴影外延值可为负，颜色，最后一个inset为内阴影，不填写默认为外阴影
+
+
+
+css3新增文本样式
+text-shadow:3px 3px 3px #00f
+跟box-shadow差不多，分别表示阴影水平移动值可为负，竖直移动值可为负，模糊值不可为负，阴影外延值可为负，颜色
