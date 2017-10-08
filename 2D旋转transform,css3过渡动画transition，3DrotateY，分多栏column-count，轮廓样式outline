@@ -1,0 +1,34 @@
+2D旋转样式
+transform:translate(300px,100px);水平和垂直移动分别300px和100px
+transform：rotate(30deg);转30度。
+可在一块使用例如下：
+transform: rotate(30deg) translate(200px,100px);
+transform:scale(2,2);根据原尺寸倍数的改变，x和y组都2倍扩大，扩大后如果超出框可用overflow:hidden;隐藏放大的部分
+可以配合:hover做出特效，也可以配合js
+
+
+
+css3过渡动画，对块状元素的效果好
+div{transition:width 2s,height 2s,transform 2s;}，宽和高都可省，变成在原地翻转。2s是时间
+div:hover{width:200px;height:200px;}
+transform:此处可结合上面2D旋转配合使用，做出特效
+
+
+3D样式
+跟2D样式一样，不同之处是加个x或y例如下：
+div{transform:rotateY(360deg;}
+div{transform:rotateY(360deg;}
+
+
+分多栏
+border:2px dashed #00f;
+column-count:3; 分三栏
+column-gap:30px; 空隙
+column-rule:4px solid #f00; 中间分栏框的大小
+
+
+轮廓样式（border外的轮廓）
+outline:2px dashed #00f;轮廓边框;outline-color:#00f;跟border用法类似了
+outline-offset：15px;轮廓距border的距离
+
+用form表单聚焦focus时，可以使用
