@@ -67,6 +67,14 @@ font-style:italic;字体样式
 font-weight:bold;字体粗细
 
 
+新增字体（不管对方电脑上有没此字体，都可用设置的字体显示）
+@font-face{
+	font-family:my;
+	src:url('my.otf');//路径
+}
+*{font-family:my;}
+
+
 文本样式:
 letter-spacing 字母间距
 word-spacing 词间距
@@ -76,6 +84,13 @@ text-indent  首行缩进
 line-height 行高
 color 颜色
 word-break折行（overflow:auto;自动出现滚动条word-break:break-all;折行)例如无数个a在同一个行的情况
+文本打断，防止出框
+word-break:break-all;最后一个单词可分离例如much，最后一个字母可能在下一行
+word-wrap:break-word;最后一个单词不可分离，此为css3新增
+
+
+滚动条
+overflow:scroll直接出现滚动条/auto自动到时机时出现滚动条/hidden超出部分隐藏
 
 
 </body>
