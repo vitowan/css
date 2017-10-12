@@ -1,0 +1,74 @@
+CSS Transform / Transition / Animation 三种和动画相关的属性总结
+其中 transform 描述了元素静态样式。而transition 和 animation 却都能实现动画效果。
+所以三者之中transform 常常配合后两者使用，也可与hover等触发属性配合使用。transition也常和hover等触发属性配合用。
+再结合opacity和box-shadow 效果更棒。
+不同点：
+
+1.  触发条件不同。transition通常和hover等事件配合使用，由事件触发。animation则和gif动态图差不多，立即播放。
+
+2. 循环。 animation可以设定循环次数。
+
+3. 精确性。 animation可以设定每一帧的样式和时间。tranistion 只能设定头尾。 animation中可以设置每一帧需要单独变化的样式属性， transition中所有样式属性都要一起变化。
+
+
+***transform***
+transform:translate(50px,100px);用%的单位也可以
+transform:rotate(30deg);可为负数 2D旋转
+transform:scale(1.2,1.2);  缩放
+transform:skew(20deg,30deg);可为负数，扭曲拉伸
+可写到一块transform:translate(50px,100px) rotate(30deg) scale(1.2,1.2) skew(20deg,30deg)；
+搭配hover使用，或者搭配transition 和animation
+兼容性处理
+-ms-transform: /*IE9*/
+-webkit-transform:  /*Safari and chrome*/
+-o-transform:  /*opera*/
+-moz-transform:   /*firefox*/
+
+以上都是2D转换,常用作3D转换的是rotateY和rotateX
+transform: rotateY(130deg);
+-webkit-transform: rotateY(130deg);	/* Safari 和 Chrome */
+-moz-transform: rotateY(130deg);	/* Firefox */
+
+也可一起用例如transform: rotateY(130deg) rotateX(80deg);
+
+
+***transition***
+transition: width 1s linear 2s;  分别表示：宽 ，过渡时间1s，过渡效果是线性，2s开始
+以下是分开写的：
+transition-property：none/all/属性名称,如果多个属性，逗号分隔。这里属性也可以是transform的属性值
+transition-duration：时间间隔默认为0
+transition-timing-function：ease默认值慢-快-慢/linear匀速/ease-in慢速开始/ease-out慢速结束/ease-in-out慢-快
+transition-delay: 等待的时间，默认0
+可结合transform和hover使用，效果好。
+
+
+***animation***
+position:relative;通畅动画的部分先要定位
+animation:my 5s linear 2s infinite alternate; 分别表示：动画名字my，持续5s，线性变化，2s开始，无限次数，下一周期逆向播放
+以下是分开写的：
+animation-name:默认none
+animation-duration:
+animation-timing-function:跟transition值一样
+animation-delay：同上
+animation-iteration-count：播放次数，infinite无限次播放
+animation-direction：默认normal，alternate逆向播放
+以下是额外2个:
+animation-play-state:paused/running暂停/播放。可配合hover等使用
+animation-fill-mode:none默认/forwards/backwards/both向前和向后填充模式都被应用。
+none	不改变默认行为。
+forwards	当动画完成后，保持最后一个属性值（在最后一个关键帧中定义）。
+backwards	在 animation-delay 所指定的一段时间内，在动画显示之前，应用开始属性值（在第一个关键帧中定义）。
+both	向前和向后填充模式都被应用。
+例子：
+position:relative;  因为下面的动画帧设置的有left和top，他们是跟着position值的。如果不移动，可省略position属性。
+animation:myfirst 5s linear 2s infinite alternate;  此处和结合hover，写到hover下面，效果跟transition差不多
+@keyframes myfirst
+{
+0%   {background:red; left:0px; top:0px;}
+25%  {background:yellow; left:200px; top:0px;}
+50%  {background:blue; left:200px; top:200px;}
+75%  {background:green; left:0px; top:200px;}
+100% {background:red; left:0px; top:0px;}
+}
+兼容性跟transform一样处理，transform里的属性都可配合动画用
+
