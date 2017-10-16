@@ -4,6 +4,11 @@ display:none;消失后不占位
 display:block显示块元素出来/inline显示行元素/
 visibility：hidden;隐身后占位/visible显示
 
+overflow:hidden超出部分隐藏/visible 默认值。内容不会被修剪，会呈现在元素框之外。
+
+overflow:scroll直接出现滚动条/auto自动到时机时出现滚动条/hidden超出部分隐藏/visible 默认值。内容不会被修剪，会呈现在元素框之外。
+
+
 
 
 阴影
