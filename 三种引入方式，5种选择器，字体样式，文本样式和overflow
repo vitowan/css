@@ -90,7 +90,7 @@ word-wrap:break-word;最后一个单词不可分离，此为css3新增
 
 
 滚动条
-overflow:scroll直接出现滚动条/auto自动到时机时出现滚动条/hidden超出部分隐藏
+overflow:scroll直接出现滚动条/auto自动到时机时出现滚动条/hidden超出部分隐藏/visible 默认值。内容不会被修剪，会呈现在元素框之外。
 
 
 </body>
