@@ -54,6 +54,9 @@ position:relative;定位没有脱离文档流，原来的位置不被其它占�
 相同点：都脱离文档流
 不同点：绝对的坐标系在浏览器左上角，相对的坐标系在自己左上角；绝对不站位，相对占位
 
+position:fixed生成绝对定位的元素，只相对于浏览器窗口进行定位。
+元素的位置通过 "left", "top", "right" 以及 "bottom" 属性进行规定。
+
 position:absolute;float:left;不可同时使用，会使float失效，这时就可能产生各种奇葩bug了，所以当一个盒子已经进行了浮动，就不要再对其进行绝对定位了
 position:relative;float:left;  可同时用
 
