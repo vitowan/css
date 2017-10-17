@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>test</title>
+<style>
+*{margin:0;padding:0;list-style:none;text-decoration:none;}
+a{width:100px;height:50px;display:inline-block;background:#ccc;border-radius:10px;}
+div>ul>li{float:left;text-align:center;line-height:50px;border-right:4px solid transparent;height:50px;/*overflow:hidden*/;position:relative;}
+div>ul>li:last-child{border:none;}
+div>ul>li>ul{position:absolute;opacity:0;transition:all 2s;visibility:hidden;}
+div>ul{width:620px;height:50px;margin:0 auto;}
+div>ul>li:hover a{background:#889;}
+
+div>ul>li:hover ul{opacity:1;visibility:visible;}
+div>ul>li>ul>li>a:hover{background:#666;}
+</style>
+</head>
+<body>
+<div class="nav">
+	<ul>
+		<li><a href="">首页</a>
+			<ul>
+				<li><a href="">首页1</a></li>
+				<li><a href="">首页2</a></li>
+				<li><a href="">首页3</a></li>
+			</ul>
+		</li>
+		<li><a href="">产品</a>
+			<ul id="ul2">
+				<li><a href="">产品1</a></li>
+				<li><a href="">产品2</a></li>
+				<li><a href="">产品3</a></li>
+			</ul>
+		</li>
+		<li><a href="">展示</a>
+			<ul>
+				<li><a href="">展示1</a></li>
+				<li><a href="">展示2</a></li>
+			</ul>
+		</li>
+		<li><a href="">下载</a>
+			<ul id="ul4">
+				<li><a href="">下载1</a></li>
+				<li><a href="">下载2</a></li>
+				<li><a href="">下载3</a></li>
+				<li><a href="">下载4</a></li>
+			</ul>
+		</li>
+		<li><a href="">案例</a>
+			<ul id="ul5">
+				<li><a href="">案例1</a></li>
+				<li><a href="">案例2</a></li>
+				<li><a href="">案例3</a></li>
+			</ul>
+		</li>
+		<li><a href="">文章</a>
+			<ul id="ul6">
+				<li><a href="">文章1</a></li>
+				<li><a href="">文章2</a></li>
+				<li><a href="">文章3</a></li>
+				<li><a href="">文章4</a></li>
+				<li><a href="">文章5</a></li>
+			</ul>		
+		</li>
+	</ul>
+	<div style="clear:both;"></div>
+<div>文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章</div>
+
+</div>
+
+
+
+</body>
+</html>
