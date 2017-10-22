@@ -1,0 +1,170 @@
+清除浮动方法一：
+先给浮动起来的父元素定个class="clearfix";
+.clearfix:after{
+		content:"";
+		height:0;
+		width:0;
+		display:block;
+		clear:both;
+}
+.clearfix:after{zoom:1;}  /*兼容ie6*/
+
+清除浮动方法一：
+在父元素内浮动的所有子元素之后加个<div class="clear"></div>
+然后清除浮动  .clear{clear:both;}
+
+其它方法有兼容性问题，暂不用
+
+
+before,after, index配合box-shadow做出阴影效果： https://paulund.co.uk/learn-css-box-shadow
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+:before和:after 用来写小三角形，用边框的特性。
+在日常的工作中会经常遇到小三角形这样的小图标，可以用添加图片的方式实现，但是更方便的是用:after  :before伪类来实现。
+
+css样式：
+p{margin:60px;border:1px solid black;height:2em;line-height:2em;}
+p:after{
+	content:'';
+	width:0;
+	height:0;
+	display:inline-block;
+	border:10px solid transparent;
+	border-left:10px solid red;
+	position:relative;
+	left:10px;
+	top:4px;
+}
+HTML格式：
+<p>这是个demo</p>
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+before和after做一个聊天框
+css样式：
+*{margin:0;padding:0;list-style:none;text-decoration:none;}
+#div0{
+	width:300px;
+	height:400px;
+	background:#ddd;
+	margin:20px auto;
+	text-align:center;
+}
+#div1,#div2{
+	background:#9EEA6A;
+	position:relative;
+	border-radius:7px;
+	margin:0 20px;
+	min-height:40px;
+line-height:40px;
+}
+#div1{
+	top:20px;
+	float:left;
+}
+#div2{
+	top:80px;
+	float:right;
+}
+p{padding:0 20px;}
+#div1:before,#div2:after{
+	content:"";
+	width:0;
+	height:0;
+	display:block;
+	border:8px solid transparent;
+	position:absolute;
+}
+#div1:before{
+	left:-15px;
+	top:11px;
+	border-right:8px solid #9EEA6A;
+}
+
+#div2:after{
+	right:-15px;
+	top:11px;
+	border-left:8px solid #9EEA6A;
+}
+
+html格式：
+<div id="div0">
+	<div id="div1">
+		<p>今天吃了吗？</p>
+	</div>
+	<div  id="div2">
+		<p>已经吃过了，很饱。</p>
+	</div>
+</div>
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+给对话框加边框：html一样，css稍有改动，小三角的边框有叠加的形式，每句话都加上before和after进行叠加
+*{margin:0;padding:0;list-style:none;text-decoration:none;}
+#div0{
+	width:300px;
+	height:400px;
+	background:#ddd;
+	margin:20px auto;
+	text-align:center;
+}
+#div1,#div2{
+	background:#9EEA6A;
+	position:relative;
+	border-radius:7px;
+	margin:0 20px;
+	min-height:40px;
+	line-height:40px;
+	border:1px solid black;
+}
+#div1{
+	top:20px;
+	float:left;
+}
+#div2{
+	top:80px;
+	float:right;
+}
+p{padding:0 20px;}
+#div1:before,#div1:after,#div2:after,#div2:before{
+	content:"";
+	width:0;
+	height:0;
+	display:block;
+	border:8px solid transparent;
+	position:absolute;
+}
+#div1:before{
+	left:-15px;
+	top:11px;
+	border-right:8px solid #9EEA6A;
+	z-index:2;
+}
+#div1:after{
+	left:-16px;
+	top:11px;
+	border-right:8px solid black;
+	z-index：-1;
+}
+#div2:after{
+	right:-15px;
+	top:11px;
+	border-left:8px solid #9EEA6A;
+	z-index:2;
+}
+#div2:before{
+	right:-16px;
+	top:11px;
+	border-left:8px solid black;
+	z-index：-1;
+}
+
+////////////////////////////////////////////////////////////////////////
+导航栏也能用到before和after设置的小三角
+
+
+
+
+
