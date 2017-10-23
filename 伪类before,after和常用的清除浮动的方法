@@ -41,7 +41,7 @@ HTML格式：
 
 
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 before和after做一个聊天框
 css样式：
 *{margin:0;padding:0;list-style:none;text-decoration:none;}
@@ -100,7 +100,7 @@ html格式：
 </div>
 
 
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 给对话框加边框：html一样，css稍有改动，小三角的边框有叠加的形式，每句话都加上before和after进行叠加
 *{margin:0;padding:0;list-style:none;text-decoration:none;}
 #div0{
@@ -161,9 +161,84 @@ p{padding:0 20px;}
 	z-index：-1;
 }
 
-////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 导航栏也能用到before和after设置的小三角
+css样式：
+*{margin:0;padding:0;list-style:none;text-decoration:none;}
+.clearfix:after{
+		content:"";
+		height:0;
+		width:0;
+		display:block;
+		clear:both;
+}
+.clearfix:after{zoom:1;}  /*兼容ie6*/
 
+
+.nav{background:#abc; }
+
+#ul1{margin:0 auto;width:606px;}
+#ul1>li{
+	text-align:center;
+	float:left;
+	position:relative;
+}
+#ul1>li>a{	
+	width:100px;
+	height:50px;
+	display:inline-block;
+	line-height:50px;
+}
+#ul1 li ul{
+	width:100%;
+	background:#ccc;
+	position:absolute;
+	visibility:hidden;
+	margin-top:5px;
+}
+#ul1>li:before{
+	content:"";
+	height:0px;
+	width:0px;
+	display:block;
+	position:absolute;
+	left:40px;
+	top:50px;
+	border:10px solid transparent;
+
+}
+#ul1 li a:hover{background:#ccc;}
+#ul1 li:hover ul{visibility:visible;}
+#ul1 li:hover:before{border-top:10px solid #ccc;}
+</style>
+
+以下是html格式：
+<div class="nav">
+	<ul id="ul1" class="clearfix">
+		<li><a href="">首页</a>
+			<ul>
+				<li>首页1</li>
+				<li>首页2</li>
+				<li>首页3</li>
+				<li>首页4</li>
+			</ul>
+		</li>
+		<li><a href="">产品</a>
+			<ul>
+				<li>产品1</li>
+				<li>产品2</li>
+				<li>产品3</li>
+			</ul>
+		</li>
+		<li><a href="">新闻</a>
+			<ul>
+				<li>新闻1</li>
+				<li>新闻2</li>
+			</ul>
+		</li>
+
+	</ul>
+</div>
 
 
 
