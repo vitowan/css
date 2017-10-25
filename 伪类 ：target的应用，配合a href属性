@@ -1,6 +1,7 @@
 URL 带有后面跟有锚名称 #，指向文档内某个具体的元素。这个被链接的元素就是目标元素(target element)。
 例如：<a href="#cc">点我</a> 点击超链接，会跳转到indext.html#cc，此时如果有元素的id="cc",那么点击后就选中了它。
 :target 选择器可用于选取当前活动的目标元素。上面选中id为cc的元素后，可以增加样式，例如 #cc:target{}
+能用到的地方：轮播图点击选图，选项卡，点击显示和隐藏内容，手机版左/右侧屏显示,优惠页面的查看详情等等
 以下是例子：
 html格式
 <a href="#div1">1</a> 
@@ -15,3 +16,51 @@ html格式
 css的样式
 div{border:1px solid #ccc;width:300px;height:100px;}
 div:target{background:#ccc;}
+/////////////////////////////////////////////////////////////////////
+做一个展开和收缩的演示：
+css代码：
+<style>
+*{margin:0;padding:0;text-decoration:none;list-style:none;}
+
+div:target{display:block;}
+div:not(:target){display:none;}/*这里也可以直接用div{display:none;}*/
+</style>
+
+html代码：
+<a href="#show" class="a1">展开</a>
+<div id="show">
+	<h3>这是详情</h3>
+	<p>这是内容这是内容这是内容这是内容这是内容</p>
+	<a href="" class="a2">收缩</a>
+</div>
+/////////////////////////////////////////////////////////
+点击跳转出一个页面
+css样式：
+<style>
+*{margin:0;padding:0;text-decoration:none;list-style:none;}
+footer{width:100%;height:100%;position:absolute;text-align:center;-webkit-transition:all 0.5s;}
+div{width:70%;height:70%;margin:5% auto;background:#fff;}
+section{text-align:center;}
+footer:target{top:0;background:rgba(0,0,0,0.8);}
+footer:not(:target){top:-100%;}
+</style>
+
+html格式：
+<body>
+<a href="#show" class="a1">展开</a>
+<footer id="show">
+<div>
+	
+	<p>这是内容这是内容这是内容这</p>
+	<p>这是内容这是内容这是内容这</p>
+
+	<a href="#" class="a2">收缩</a>
+</div>
+</footer>
+<section><p>1111111111111111233411111111111111112334这是内容这是内这是内容这是内容这是内这是内容这</p>
+
+</body>
+////////////////////////////////////////////////////////////////////////////////////////
+href可以做到一键置顶
+
+<span style="font-size:14px;"><a href="#">回到最顶端</a></span> 
