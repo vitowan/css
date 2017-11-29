@@ -14,7 +14,7 @@ background-image图片:url(images/1.jpg);括号内是路径，没有引号
 background-repeat重复（repeat、no-repeat）
 background-attachment  （fixed/scroll)scroll只适用于body滚动；fixed固定
 background-position：（x y)可写成50% 50%，也可以写成300px 500px，也可写成left/right/top/bottom(例如left top或者center center)，如果不写y坐标值表示y值不变
-background可缩写例如 background:#cc url("xs.png") no-repeat fixed 50% 50%;
+background可缩写例如 background:#cc url(xs.png) no-repeat fixed 50% 50%;
 
 如果很多图在一块，可先定需要定容器div的宽高（width height），然后设定background背景图位置position
 
