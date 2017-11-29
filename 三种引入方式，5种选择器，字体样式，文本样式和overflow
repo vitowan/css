@@ -77,8 +77,8 @@ font-weight:bold;字体粗细； 默认为normal 相当于400，bold加粗相当
 
 
 文本样式:
-letter-spacing 字母间距
-word-spacing 词间距
+letter-spacing 字母间距，在中文中为字体的间距
+word-spacing 词间距，中文中词语间有空格才能显示此效果
 text-decoration 下划线之类的（underline,line-through,overline)，默认为none
 text-align  对齐
 text-indent  首行缩进
@@ -88,6 +88,10 @@ word-break折行（overflow:auto;自动出现滚动条word-break:break-all;折�
 文本打断，防止出框
 word-break:break-all;最后一个单词可分离例如much，最后一个字母可能在下一行
 word-wrap:break-word;最后一个单词不可分离，此为css3新增
+text-transform:capitalize所有词的首字母大写/lowercase 转换成小写/uppercase 转换成大写
+white-space:nowrap 强制不换行，直到<br> 
+white-space:pre 代码中什么格式写的，浏览器就怎么显示，类似于<pre></pre>
+white-space:normal 默认的 跟pre-line 效果一样
 
 
 滚动条
