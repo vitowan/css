@@ -60,11 +60,12 @@ p::selection{background:#ff0000} 前端用户选择字段时出现样式效果
 
 
 
-字体样式
-font-family:微软雅黑/黑体/仿宋等;字体类型
+字体样式ti
+font-family:微软雅黑/黑体/仿宋等;字体类型,字体类型中如有中文或者空格的，要加引号。例如font-famly:Arial, '微软雅黑', 'Times New Roman';
+中文类型字体中正常显示中英文，而英文字体中只显示英文，例如font-family:Arial;不会正常显示中文，此时可写多字体组，例如font-family:Arial,'微软雅黑';
 font-size:20px;字体大小
-font-style:italic;字体样式
-font-weight:bold;字体粗细
+font-style:文字样式；normal默认的/italic 文字倾斜/oblique文字盒倾斜，让没有斜体属性的文字做倾斜操作
+font-weight:bold;字体粗细； 默认为normal 相当于400，bold加粗相当于700，加粗也可用数字不带单（100-900）数字可选写100-900中一个
 
 
 新增字体（不管对方电脑上有没此字体，都可用设置的字体显示）
@@ -78,10 +79,10 @@ font-weight:bold;字体粗细
 文本样式:
 letter-spacing 字母间距
 word-spacing 词间距
-text-decoration 下划线之类的（underline,line-through,overline)
+text-decoration 下划线之类的（underline,line-through,overline)，默认为none
 text-align  对齐
 text-indent  首行缩进
-line-height 行高
+line-height 行高，设置行高后，文字会在行高范围内垂直居中，行高撑不起外盒div等的高
 color 颜色
 word-break折行（overflow:auto;自动出现滚动条word-break:break-all;折行)例如无数个a在同一个行的情况
 文本打断，防止出框
