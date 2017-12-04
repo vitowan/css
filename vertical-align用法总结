@@ -27,13 +27,14 @@
         1.当父元素设置了inline-height行高，子元素中的（inline-block/inline元素）vertical-align才能起作用。此时是子元素相对父元素位置变化的，
         例如vertical：baseline默认/middle/bottom/text-bottom/sub/super/top/text-top等等，
         **单独的图片也可以这样使用,图片，按钮，单复选框，单行/多行文本框等HTML控件，只有这些元素默认情况下会对vertical-align属性起作用
-        **但是其他的行元素或块行元素必须至少2个配合才可以（单独的其他元素只能在行中间，除非再单独设小一点的行高，因为行高有继承性)
+        **单独的其他元素只能在行中间，除非再单独设小一点的行高，因为行高有继承性
         **inline元素作为父元素可以不设置line-height，字体会撑起一个适合子元素作用的高度。
 
 
         2.当父元素不设置line-height行高
         **当父元素没有设置line-height时，只对行内元素的兄弟元素对齐有用，无法子元素居中对齐父元素。
         **设置了vertical-align:middle的子元素的中线与兄弟元素的基线对齐。若兄弟元素都设置该项，则居中对齐。
+        
         **例如一个div里面有img图片和span文字：
         当span设置vertical1-align:middle;span的中线会对齐图片的底线，图片位置不变
         当图片设置了vertical-align:middle;兄弟元素span文字会对齐到图片中间，因为此时以最大占位者的高度作为行高
