@@ -7,7 +7,7 @@
 		display:block;
 		clear:both;
 }
-.clearfix:after{zoom:1;}  /*兼容ie6*/
+.clearfix{zoom:1;}  /*兼容ie6*/
 
 清除浮动方法一：
 在父元素内浮动的所有子元素之后加个<div class="clear"></div>
