@@ -40,7 +40,8 @@ border-image：详情查手册。
 
 
 鼠标cursor
-cursor:crosshair十字架/pointer手/wait等待/default默认/help帮助
+cursor:crosshair十字架/pointer手/wait等待/default默认/help帮助/move拖拽移动符/text文本/
+cursor:url(路径),default;自定义为图形额鼠标
 
 
 列表样式
