@@ -20,6 +20,12 @@ css的三种引入方式
 <link rel="stylesheet" type="text/css" href="css/style.css">
 
 外部引入时要在css文件的开头写上编码：@charset "utf-8";
+
+4.样式表中引入其它css样式表：只能加载到css样式表中
+写到css样式表中  @import url(css路径）；
+例如： @import url(reset.css);
+@import url('reset.css');
+@import url "reset .css";
 -->
 
 <!--
@@ -94,6 +100,11 @@ text-transform:capitalize所有词的首字母大写/lowercase 转换成小写/u
 white-space:nowrap 强制不换行，直到<br> 
 white-space:pre 代码中什么格式写的，浏览器就怎么显示，类似于<pre></pre>
 white-space:normal 默认的 跟pre-line 效果一样
+文本溢出显示省略号：text-overflow:ellipsis 显示省略号/clip默认修剪文本
+例如：width:10px
+white-space:nowrap;
+overflow:hidden;
+text-overflow:ellipsis;
 
 
 滚动条
