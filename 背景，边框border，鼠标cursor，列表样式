@@ -22,6 +22,50 @@ css3背景background新增
 background-size:宽高，一个值或2个，例如100px
 background-origin:content-box有效区域/padding-box默认内边距/border-box边框边距; 此属性表示背景图位置
 
+、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、
+background-size背景图尺寸：
+  background-size:npx; 图片等比例缩放到npx;
+  background-size:npx mpx; 图片缩放到宽度npx，高度mpx
+  background-size:cover; 覆盖，等比例缩放到铺满整个盒子，背景图片可能无法完整的显示在盒子中，背景图缩放到足够大使背景图完全覆盖盒子区域。
+  background-size:contain; 包含，等比例缩放图片必须完整显示，背景图片在盒子区域内能够完整的显示但是盒子可能铺不满，将背景图缩放到相应的尺寸
+    适应盒子的区域
+  一个标记可以添加多个背景图片，每个背景图片参数之间用逗号隔开
+    background: url("../images/Koala.jpg") no-repeat left top, url("../images/map.jpg") no-repeat right bottom;
+    background-size: 100px;
+    。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。
+    
+
+  background-origin 背景图片的定位区域，背景图片可以放置于：
+  background-origin:content-box; 背景图片相对于内容来定位
+  background-origin:border-box; 背景图片相对于边框来定位
+  background-origin:padding-box; 背景图片相对于内填充来定位
+        
+        。。。。。。。。。。。。。。。。。。。。。。。。。。。。。
+    background-clip 背景的绘制区域：
+    background-clip: content-box; 背景仅在内容区域显示
+    background-clip: border-box; 背景在内容区、padding区、border区显示
+    background-clip: padding-box; 背景在内容区、padding区显示
+    
+    。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。
+    线性渐变：linear-gradient
+    background: linear-gradient(方向,颜色1 范围1,颜色2 范围2,...);
+        方向： top、bottom(90deg从下到上)、left(0deg从左到右显示)、right、ndeg(n为数值，正值显示为逆时针方向)
+        色值：使用关键词（red\green\blue\orange）、rgba(n,n,n,0.5)使用透明度、十六进制色值
+        范围：每个颜色节点的显示位置
+        background: -webkit-linear-gradient(top ,red 10%,pink 50%,green 90%);
+   重复线性渐变：
+        background: -webkit-repeating-linear-gradient(方向，颜色1 范围1，颜色2 范围2);
+
+径向渐变：radial-gradient
+    background: radial-gradient(中心位置，[渐变形状]，颜色1 范围1，颜色2 范围2，...);
+        中心位置：center、left top、right top、bottom、x（水平方向的偏移） y(垂直方向的偏移)
+        渐变形状：椭圆形ellipse、圆形 circle
+    background: -webkit-radial-gradient(center,circle,red 10%,yellow 50%,orange);
+    重复径向渐变：
+        background: -webkit-repeating-radial-gradient(中心位置，[渐变形状]，颜色1 范围1，颜色2 范围2);
+    background: -webkit-repeating-radial-gradient(center,red,yellow 10%,orange 30%);
+    
+
 
 
 
@@ -37,6 +81,13 @@ border-radius边框样式（css3新加）
 border-radius:把角落变成圆角，如果只有一个值128px就变成圆了，可跟1个值，二个，三个或4个，值表示4个角的内切圆直径
 例如border-radius:5px四个角的值一样/5px 20px/20px 50px 100px/20px 50px 100px 120px/类似于position定位上右下左
 border-image：详情查手册。
+
+border-radius: 盒子的边框圆角
+    border-radius: 10px;   盒子的左上、右上、右下、左下各有10px的圆角
+    border-radius: 50px 100px; 盒子的左上和右下各有50px圆角、右上和左下各有100px的圆角
+    border-radius: 50px 100px 150px; 盒子的左上有50px的圆角，右上和左下各有100px的圆角，右下150px的圆角
+    border-radius:20px 80px 120px 150px; 盒子的左上20px圆角、右上80px圆角、右下120px的圆角、左下150px圆角
+    border-radius: 50%; 在盒子尺寸宽高都相同的情况下加这一条命令制作出一个圆
 
 
 鼠标cursor
