@@ -85,6 +85,7 @@ font-weight:bold;字体粗细； 默认为normal 相当于400，bold加粗相当
 
 
 文本样式:
+font-variant:normal默认正常/small-caps小型大写字母
 letter-spacing 字母间距，在中文中为字体的间距
 word-spacing 词间距，中文中词语间有空格才能显示此效果
 text-decoration 下划线之类的（underline,line-through,overline)，默认为none
