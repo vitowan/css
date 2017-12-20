@@ -26,6 +26,8 @@ css的三种引入方式
 例如： @import url(reset.css);
 @import url('reset.css');
 @import url "reset .css";
+
+也可写在html中，放到style之间
 -->
 
 <!--
