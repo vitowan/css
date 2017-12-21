@@ -29,7 +29,7 @@ background-size背景图尺寸：
   background-size:cover; 覆盖，等比例缩放到铺满整个盒子，背景图片可能无法完整的显示在盒子中，背景图缩放到足够大使背景图完全覆盖盒子区域。
   background-size:contain; 包含，等比例缩放图片必须完整显示，背景图片在盒子区域内能够完整的显示但是盒子可能铺不满，将背景图缩放到相应的尺寸
     适应盒子的区域
-  一个标记可以添加多个背景图片，每个背景图片参数之间用逗号隔开
+  一个标记可以添加多个背景图片，每个背景图片参数之间用逗号隔开,如果想让背景图有覆盖重叠，则需要把叠在下面的背景图写在最后面
     background: url("../images/Koala.jpg") no-repeat left top, url("../images/map.jpg") no-repeat right bottom;
     background-size: 100px;
     。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。
