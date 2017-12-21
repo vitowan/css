@@ -9,9 +9,9 @@
 </head>
 <body>
 内外边距
-margin:上右下左，如果上下都有，则合并以大的数字尺寸为准，左右同样方式
-子元素如果用margin-top 会使父元素的margin变化，建议用padding-top
-如果2个盒子在一起，他们的margin值会重叠，且以较大者为margin值
+margin:上右下左，     如果上下都有，则合并以大的数字尺寸为准，左右则间距叠加一起为2者的间距
+子元素如果用margin-top 会使父元素的margin变化，建议用padding-top，也可以给父级盒加border，或者给父级盒加overflow:hidden;
+
 
 padding的距离和border的宽度是外延的变大，内部图片不变大小
 例如img原宽高100*100，边框为5，内边距是5，则总占位图片120*120
