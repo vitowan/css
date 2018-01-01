@@ -66,6 +66,59 @@ p::selection{background:#ff0000} 前端用户选择字段时出现样式效果
 [id=use1]
 [name*=us]含有us的
 [name|=en]
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>css3</title>
+		<style>
+			/*识别含有title属性的标签*/
+			/*
+			div[title]{
+				border:1px solid red;
+			}
+			*/
+			
+			/*识别title属性值等于"you love me"的标签*/
+			div[title="you love me"]{
+				border:3px double blue;
+			}
+			
+			/*识别title属性值中含有you 并且用空格隔开的*/
+			div[title ~="you"]{
+				border:3px double yellow;
+			}
+			
+			
+			/*识别title属性值中任意位置含有you的*/
+			div[title *= "you"]{
+				border:3px double pink;
+			}
+			
+			/*识别title属性值中以l开头的*/
+			
+			div[title ^="l"]{
+				border:3px double green;
+			}
+			
+			/*识别title属性值中以l结尾的*/
+			
+			div[title $="m"]{
+				border:3px double yellow;
+			}
+		</style>
+	</head>
+	<body>
+		<div title="i love you"><img src="../images/7.jpg" width="300px"></div>
+		<div title="you love me"><img src="../images/7.jpg" width="300px"></div>
+		<div title="youloveme"><img src="../images/7.jpg" width="300px"></div>
+		<div title="let us go"><img src="../images/7.jpg" width="300px"></div>
+		<div title="kiss mm"><img src="../images/7.jpg" width="300px"></div>
+	</body>
+</html>
+
 -->
 
 
